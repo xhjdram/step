@@ -9,12 +9,7 @@
     <bookmark url="file://$PROJECT_DIR$/../step/web/jsp/customer/list.jsp" line="135" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c805e5d-d452-4361-afdf-c882a04d1d24" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../step/web/js/DyAdd.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../step/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../step/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../step/src/webs/action/Base_dictAction.java" afterPath="$PROJECT_DIR$/../step/src/webs/action/Base_dictAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../step/web/jsp/customer/add.jsp" afterPath="$PROJECT_DIR$/../step/web/jsp/customer/add.jsp" />
-    </list>
+    <list default="true" id="0c805e5d-d452-4361-afdf-c882a04d1d24" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/../step/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -575,7 +570,7 @@
       <workItem from="1510120605684" duration="3685000" />
       <workItem from="1510124337786" duration="30758000" />
       <workItem from="1510236798733" duration="228000" />
-      <workItem from="1510385864144" duration="7573000" />
+      <workItem from="1510385864144" duration="7634000" />
     </task>
     <task id="LOCAL-00001" summary="BaseDao&#10;BaseImpl">
       <created>1510220162248</created>
@@ -598,11 +593,18 @@
       <option name="project" value="LOCAL" />
       <updated>1510386647262</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="前台动态下拉选实现">
+      <created>1510396553002</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1510396553002</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75656000" />
+    <option name="totallyTimeSpent" value="75717000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -687,7 +689,8 @@
     <MESSAGE value="BaseDao&#10;BaseImpl" />
     <MESSAGE value="no" />
     <MESSAGE value="加入了数据字典表" />
-    <option name="LAST_COMMIT_MESSAGE" value="加入了数据字典表" />
+    <MESSAGE value="前台动态下拉选实现" />
+    <option name="LAST_COMMIT_MESSAGE" value="前台动态下拉选实现" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
