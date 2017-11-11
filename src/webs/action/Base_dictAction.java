@@ -17,7 +17,7 @@ public class Base_dictAction extends ActionSupport {
     public String execute() throws Exception {
         List<Base_dict> list = base_dictService.selectBase(dict_type_code);
         String s = JSONArray.fromObject(list).toString();
-        ServletActionContext.getResponse().setContentType("application/json;utf-8");
+        ServletActionContext.getResponse().setContentType("application/json;charset=utf-8");
         ServletActionContext.getResponse().getWriter().write(s);
         return null;
     }
