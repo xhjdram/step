@@ -34,16 +34,15 @@
     <%--</script>--%>
     <script type="text/javascript">
         $(document).ready(function () {
-            dynamicsAddSelected("customerGrade", "005", "19", "dict_type_code");
+            dynamicsAddSelected("customerGrade", "006", null, "cust_level.dict_id");
+            dynamicsAddSelected("customerSource", "009", null, "cust_source.dict_id");
         });
     </script>
 </HEAD>
 <BODY>
 <FORM id=form1 name=form1
-      action="${pageContext.request.contextPath }/AddCustomerAction"
-      method=post>
-
-    <select></select>
+      action="${pageContext.request.contextPath }/customerAction_add"
+      method=post enctype="multipart/form-data">
     <TABLE cellSpacing=0 cellPadding=0 width="98%" border=0>
         <TBODY>
         <TR>
@@ -56,6 +55,7 @@
         </TR>
         </TBODY>
     </TABLE>
+
     <TABLE cellSpacing=0 cellPadding=0 width="98%" border=0>
         <TBODY>
         <TR>
@@ -72,9 +72,8 @@
                 </TABLE>
 
                 <TABLE cellSpacing=0 cellPadding=5 border=0>
-
-
                     <TR>
+
                         <td>客户名称：</td>
                         <td>
                             <INPUT class=textbox id=sChannel2
@@ -89,9 +88,8 @@
                     <TR>
 
                         <td>信息来源 ：</td>
-                        <td>
-                            <INPUT class=textbox id=sChannel2
-                                   style="WIDTH: 180px" maxLength=50 name="cust_source">
+                        <td id="customerSource">
+
                         </td>
                         <td>联系人：</td>
                         <td>
@@ -114,6 +112,11 @@
                                    style="WIDTH: 180px" maxLength=50 name="cust_mobile">
                         </td>
                     </TR>
+                    <tr>
+                        <td>
+                            <input type="file"name="photo" >
+                        </td>
+                    </tr>
                     <tr>
                         <td rowspan=2>
                             <INPUT class=button id=sButton2 type=submit

@@ -23,4 +23,8 @@ public class CustomerService {
     public void setCustomerDao(CustomerDao customerDao) {
         this.customerDao = customerDao;
     }
+
+    public void add(Customer customer) {
+        customerDao.add(customer);
+    }
 }

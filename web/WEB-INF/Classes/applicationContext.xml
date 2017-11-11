@@ -40,6 +40,7 @@
             <tx:method name="execute" propagation="REQUIRED" read-only="false" isolation="DEFAULT"/>
             <tx:method name="login" isolation="DEFAULT" propagation="REQUIRED" read-only="false"></tx:method>
             <tx:method name="list*" read-only="false" propagation="REQUIRED" isolation="DEFAULT"></tx:method>
+            <tx:method name="*" isolation="DEFAULT" propagation="REQUIRED" read-only="false"></tx:method>
         </tx:attributes>
     </tx:advice>
     <aop:config>

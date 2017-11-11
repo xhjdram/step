@@ -9,14 +9,19 @@ import org.hibernate.criterion.DetachedCriteria;
 import org.hibernate.criterion.Restrictions;
 import service.CustomerService;
 
+import java.io.File;
+
 public class CustomerAction extends ActionSupport implements ModelDriven<Customer> {
     Customer customer = new Customer();
+    private File photo;
+    private String photoFileName;
+    private String photoContentType;
 
     private Integer count;
 
     private Integer currentPage;
-    private CustomerService customerService;
 
+    private CustomerService customerService;
     public String list() throws Exception {
         PageBean pageBean;
         DetachedCriteria detachedCriteria = DetachedCriteria.forClass(Customer.class);
@@ -30,6 +35,14 @@ public class CustomerAction extends ActionSupport implements ModelDriven<Custome
         ActionContext context = ActionContext.getContext();
         context.put("pageBean", pageBean);
         return "list";
+    }
+
+    public String add(){
+        customerService.add(customer);
+        photo.renameTo(new File("D:/my.jpg"));
+        System.out.println(photoFileName);
+        System.out.println(photoContentType);
+        return "toAction";
     }
 
     @Override
@@ -47,5 +60,17 @@ public class CustomerAction extends ActionSupport implements ModelDriven<Custome
 
     public void setCustomerService(CustomerService customerService) {
         this.customerService = customerService;
+    }
+
+    public void setPhoto(File photo) {
+        this.photo = photo;
+    }
+
+    public void setPhotoFileName(String photoFileName) {
+        this.photoFileName = photoFileName;
+    }
+
+    public void setPhotoContentType(String photoContentType) {
+        this.photoContentType = photoContentType;
     }
 }

@@ -20,16 +20,12 @@
             $("#customerForm").submit();
 //        alert(currentPage);
         }
-
         function changeCount(count) {
             alert(count);
             $("#count").val(count);
             alert($("#count").val());
             $("#customerForm").submit();
-
         }
-
-
     </script>
 
     <META content="MSHTML 6.00.2900.3492" name=GENERATOR>
@@ -86,7 +82,6 @@
                             </TABLE>
                         </TD>
                     </TR>
-
                     <TR>
                         <TD>
                             <TABLE id=grid
@@ -107,11 +102,11 @@
                                     <TR
                                             style="FONT-WEIGHT: normal; FONT-STYLE: normal; BACKGROUND-COLOR: white; TEXT-DECORATION: none">
                                         <TD><s:property value="#customer.cust_name"/></TD>
-                                        <TD><S:property value="#customer.cust_name"/></TD>
-                                        <TD><S:property value="#customer.cust_name"/></TD>
-                                        <TD><S:property value="#customer.cust_name"/></TD>
-                                        <TD><S:property value="#customer.cust_name"/></TD>
-                                        <TD><S:property value="#customer.cust_name"/></TD>
+                                        <TD><S:property value="#customer.cust_level.dict_item_name"/></TD>
+                                        <TD><S:property value="#customer.cust_source.dict_item_name"/></TD>
+                                        <TD><S:property value="#customer.cust_linkman"/></TD>
+                                        <TD><S:property value="#customer.cust_phone"/></TD>
+                                        <TD><S:property value="#customer.cust_mobile"/></TD>
                                         <TD>
                                             <a href="${pageContext.request.contextPath }/customerServlet?method=edit&custId=${customer.cust_id}">修改</a>
                                             &nbsp;&nbsp;
@@ -119,8 +114,6 @@
                                         </TD>
                                     </TR>
                                 </s:iterator>
-
-
                                 </TBODY>
                             </TABLE>
                         </TD>
@@ -153,7 +146,6 @@
 		value='#pageBean.currentPage'
 />"/>
 												页
-												
 												<input type="button" value="Go" onclick="to_page($('#page').val())"/>
 											</DIV>
 									</SPAN></TD>

@@ -8,6 +8,10 @@
 
         <action class="customerAction" name="customerAction_*" method="{1}">
             <result name="list" type="dispatcher">/jsp/customer/list.jsp</result>
+            <result name="toAction" type="redirectAction">
+                <param name="namespace">/</param>
+                <param name="actionName">/customerAction_list</param>
+            </result>
         </action>
         <action class="base_dictAction" name="base_dictAction" method="execute"></action>
     </package>

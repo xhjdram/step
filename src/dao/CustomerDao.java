@@ -26,4 +26,9 @@ public class CustomerDao extends HibernateDaoSupport {
         List<Customer> byCriteria = (List<Customer>) hibernateTemplate.findByCriteria(detachedCriteria, start, count);
         return byCriteria;
     }
+
+    public void add(Customer customer) {
+        HibernateTemplate hibernateTemplate = this.getHibernateTemplate();
+        hibernateTemplate.save(customer);
+    }
 }
