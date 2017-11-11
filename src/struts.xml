@@ -4,10 +4,11 @@
         "http://struts.apache.org/dtds/struts-2.3.dtd">
 <struts>
     <constant name="struts.objectFactory" value="spring"></constant>
-    <package name="user" namespace="/"  extends="struts-default"   >
+    <package name="user" namespace="/" extends="struts-default">
 
         <action class="customerAction" name="customerAction_*" method="{1}">
-            <result name="list" type="dispatcher" >/jsp/customer/list.jsp</result>
+            <result name="list" type="dispatcher">/jsp/customer/list.jsp</result>
         </action>
+        <action class="base_dictAction" name="base_dictAction" method="execute"></action>
     </package>
 </struts>

@@ -37,24 +37,33 @@
     </bean>
     <tx:advice id="txs" transaction-manager="transactionManager">
         <tx:attributes>
-            <tx:method name="execute" propagation="REQUIRED" read-only="false" isolation="DEFAULT" />
+            <tx:method name="execute" propagation="REQUIRED" read-only="false" isolation="DEFAULT"/>
             <tx:method name="login" isolation="DEFAULT" propagation="REQUIRED" read-only="false"></tx:method>
             <tx:method name="list*" read-only="false" propagation="REQUIRED" isolation="DEFAULT"></tx:method>
         </tx:attributes>
     </tx:advice>
-    <aop:config >
+    <aop:config>
         <aop:pointcut id="pc" expression="execution(* service.*.*(..) )"></aop:pointcut>
-        <aop:advisor advice-ref="txs"  pointcut-ref="pc" ></aop:advisor>
+        <aop:advisor advice-ref="txs" pointcut-ref="pc"></aop:advisor>
     </aop:config>
 
     <bean class="webs.action.CustomerAction" name="customerAction" scope="prototype">
-        <property name="customerService" ref="customerService" ></property>
+        <property name="customerService" ref="customerService"></property>
     </bean>
     <bean class="service.CustomerService" name="customerService">
         <property name="customerDao" ref="customerDao"></property>
     </bean>
     <bean class="dao.CustomerDao" name="customerDao">
         <property name="sessionFactory" ref="sessionFactory"></property>
-     </bean>
+    </bean>
+    <bean class="dao.Base_dictDao" name="base_dictDao">
+        <property name="sessionFactory" ref="sessionFactory"></property>
+    </bean>
+    <bean class="service.Base_dictService" name="base_dictService">
+        <property name="base_dictDao" ref="base_dictDao"></property>
+    </bean>
+    <bean class="webs.action.Base_dictAction" name="base_dictAction" scope="prototype">
+        <property name="base_dictService" ref="base_dictService"></property>
+    </bean>
 
 </beans>

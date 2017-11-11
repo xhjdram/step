@@ -4,13 +4,13 @@
         "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <!-- 配置表与实体对象的关系 -->
 <!-- package属性:填写一个包名.在元素内部凡是需要书写完整类名的属性,可以直接写简答类名了. -->
-<hibernate-mapping package="domain" >
+<hibernate-mapping package="domain">
     <!--
         class元素: 配置实体与表的对应关系的
             name: 完整类名
             table:数据库表名
      -->
-    <class name="LinkMan"  >
+    <class name="LinkMan">
         <!-- id元素:配置主键映射的属性
                 name: 填写主键对应属性名
                 column(可选): 填写表中的主键列名.默认值:列名会默认使用属性名
@@ -28,7 +28,7 @@
         <!--private String lkm_mobile;-->
         <!--private String lkm_memo;-->
         <!--private String lkm_position;-->
-        <id name="lkm_id"  >
+        <id name="lkm_id">
             <!-- generator:主键生成策略(明天讲) -->
             <generator class="native"></generator>
         </id>
@@ -40,13 +40,13 @@
                 not-null(可选):配置该属性(列)是否不能为空. 默认值:false
                 length(可选):配置数据库中列的长度. 默认值:使用数据库类型的最大长度
          -->
-        <property name="lkm_email"  ></property>
-        <property name="lkm_gender"  ></property>
-        <property name="lkm_memo"  ></property>
-        <property name="lkm_mobile"  ></property>
-        <property name="lkm_name"  ></property>
-        <property name="lkm_position"  ></property>
-        <property name="lkm_qq"  ></property>
+        <property name="lkm_email"></property>
+        <property name="lkm_gender"></property>
+        <property name="lkm_memo"></property>
+        <property name="lkm_mobile"></property>
+        <property name="lkm_name"></property>
+        <property name="lkm_position"></property>
+        <property name="lkm_qq"></property>
         <property name="lkm_phone"></property>
         <many-to-one name="customer" class="domain.Customer" column="lkm_cust_id"></many-to-one>
     </class>

@@ -31,7 +31,7 @@
       <configuration>
         <datasource-map>
           <unit-entry name="hibernate.cfg.xml" />
-          <unit-entry name="noname-applicationContext.xml@1302" value="dataSource" />
+          <unit-entry name="noname-applicationContext.xml@1302" value="e78ab968-8124-42a5-8541-5f714a1ef283" />
           <unit-entry name="noname-applicationContext.xml@1309" value="dataSource" />
         </datasource-map>
         <naming-strategy-map />
@@ -58,5 +58,6 @@
         <jarDirectory url="file://$MODULE_DIR$/web/WEB-INF/lib" recursive="false" />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="Java EE 6" level="project" />
   </component>
 </module>

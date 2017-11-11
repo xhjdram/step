@@ -18,18 +18,47 @@ public class Customer {
   PRIMARY KEY (`cust_id`)
 ) ENGINE=INNODB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
  */
+    //    private String cust_source;
+//    private String cust_industry;
+//    private String cust_level;
+
+    private String cust_linkman;
+
     private Long cust_id;
     private String cust_name;
-    private String cust_source;
-    private String cust_industry;
-    private String cust_level;
-    private String cust_linkman;
     private String cust_phone;
     private String cust_mobile;
     private Set<LinkMan> set = new HashSet<LinkMan>();
+    private Base_dict cust_source;
+    private Base_dict cust_industry;
+    private Base_dict cust_level;
 
     public Set<LinkMan> getSet() {
         return set;
+    }
+
+    public Base_dict getCust_source() {
+        return cust_source;
+    }
+
+    public void setCust_source(Base_dict cust_source) {
+        this.cust_source = cust_source;
+    }
+
+    public Base_dict getCust_industry() {
+        return cust_industry;
+    }
+
+    public void setCust_industry(Base_dict cust_industry) {
+        this.cust_industry = cust_industry;
+    }
+
+    public Base_dict getCust_level() {
+        return cust_level;
+    }
+
+    public void setCust_level(Base_dict cust_level) {
+        this.cust_level = cust_level;
     }
 
     public void setSet(Set<LinkMan> set) {
@@ -50,30 +79,6 @@ public class Customer {
 
     public void setCust_name(String cust_name) {
         this.cust_name = cust_name;
-    }
-
-    public String getCust_source() {
-        return cust_source;
-    }
-
-    public void setCust_source(String cust_source) {
-        this.cust_source = cust_source;
-    }
-
-    public String getCust_industry() {
-        return cust_industry;
-    }
-
-    public void setCust_industry(String cust_industry) {
-        this.cust_industry = cust_industry;
-    }
-
-    public String getCust_level() {
-        return cust_level;
-    }
-
-    public void setCust_level(String cust_level) {
-        this.cust_level = cust_level;
     }
 
     public String getCust_linkman() {
