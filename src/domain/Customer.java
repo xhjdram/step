@@ -25,6 +25,7 @@ public class Customer {
     private String cust_linkman;
 
     private Long cust_id;
+
     private String cust_name;
     private String cust_phone;
     private String cust_mobile;
@@ -32,7 +33,6 @@ public class Customer {
     private Base_dict cust_source;
     private Base_dict cust_industry;
     private Base_dict cust_level;
-
     public Set<LinkMan> getSet() {
         return set;
     }
@@ -105,11 +105,21 @@ public class Customer {
         this.cust_mobile = cust_mobile;
     }
 
+
+
     @Override
     public String toString() {
-        return "Customer [cust_id=" + cust_id + ", cust_name=" + cust_name + "]";
+        return "Customer{" +
+                "cust_linkman='" + cust_linkman + '\'' +
+                ", cust_id=" + cust_id +
+                ", cust_name='" + cust_name + '\'' +
+                ", cust_phone='" + cust_phone + '\'' +
+                ", cust_mobile='" + cust_mobile + '\'' +
+                ", set=" + set +
+                ", cust_source=" + cust_source +
+                ", cust_industry=" + cust_industry +
+                ", cust_level=" + cust_level +
+                '}';
     }
-
-
 }
 

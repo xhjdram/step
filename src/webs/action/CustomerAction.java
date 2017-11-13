@@ -13,9 +13,9 @@ import java.io.File;
 
 public class CustomerAction extends ActionSupport implements ModelDriven<Customer> {
     Customer customer = new Customer();
-    private File photo;
-    private String photoFileName;
-    private String photoContentType;
+//    private File photo;
+//    private String photoFileName;
+//    private String photoContentType;
 
     private Integer count;
 
@@ -38,12 +38,20 @@ public class CustomerAction extends ActionSupport implements ModelDriven<Custome
     }
 
     public String add(){
-        customerService.add(customer);
-        photo.renameTo(new File("D:/my.jpg"));
-        System.out.println(photoFileName);
-        System.out.println(photoContentType);
+        customerService.addOrUpdate(customer);
+//        photo.renameTo(new File("D:/my.jpg"));
+//        System.out.println(photoFileName);
+//        System.out.println(photoContentType);
         return "toAction";
     }
+    public String edit(){
+        Customer customer1 =customerService.getCustomer(customer.getCust_id());
+        ActionContext context = ActionContext.getContext();
+        System.out.println(customer1.toString());
+        context.put("customer",customer1);
+        return "add";
+    }
+
 
     @Override
     public Customer getModel() {
@@ -61,16 +69,16 @@ public class CustomerAction extends ActionSupport implements ModelDriven<Custome
     public void setCustomerService(CustomerService customerService) {
         this.customerService = customerService;
     }
-
-    public void setPhoto(File photo) {
-        this.photo = photo;
-    }
-
-    public void setPhotoFileName(String photoFileName) {
-        this.photoFileName = photoFileName;
-    }
-
-    public void setPhotoContentType(String photoContentType) {
-        this.photoContentType = photoContentType;
-    }
+//
+//    public void setPhoto(File photo) {
+//        this.photo = photo;
+//    }
+//
+//    public void setPhotoFileName(String photoFileName) {
+//        this.photoFileName = photoFileName;
+//    }
+//
+//    public void setPhotoContentType(String photoContentType) {
+//        this.photoContentType = photoContentType;
+//    }
 }

@@ -24,7 +24,12 @@ public class CustomerService {
         this.customerDao = customerDao;
     }
 
-    public void add(Customer customer) {
-        customerDao.add(customer);
+    public void addOrUpdate(Customer customer) {
+        customerDao.addOrUpdate(customer);
+    }
+
+    public Customer getCustomer(Long cust_id) {
+        customerDao.getCustomerDao(cust_id);
+        return customerDao.getCustomerDao(cust_id);
     }
 }

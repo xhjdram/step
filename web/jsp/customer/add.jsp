@@ -1,10 +1,12 @@
 ﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+<%@ taglib prefix="S" uri="/struts-tags" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-    <TITLE>添加客户</TITLE>
+    <TITLE><s:if test="#customer.cust_id!=null">修改客户</s:if><s:else>添加客户</s:else></TITLE>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <LINK href="${pageContext.request.contextPath }/css/Style.css" type=text/css rel=stylesheet>
     <LINK href="${pageContext.request.contextPath }/css/Manage.css" type=text/css
@@ -33,16 +35,19 @@
         <%--}--%>
     <%--</script>--%>
     <script type="text/javascript">
-        $(document).ready(function () {
-            dynamicsAddSelected("customerGrade", "006", null, "cust_level.dict_id");
-            dynamicsAddSelected("customerSource", "009", null, "cust_source.dict_id");
+        $(document).ready(function(){
+            dynamicsAddSelected("customerGrade","006",<s:property value="#customer.cust_level.dict_id"/>,"cust_level.dict_id");
+            dynamicsAddSelected("customerSource","009",<s:property value="#customer.cust_source.dict_id"/>,"cust_source.dict_id");
         });
     </script>
 </HEAD>
 <BODY>
 <FORM id=form1 name=form1
       action="${pageContext.request.contextPath }/customerAction_add"
-      method=post enctype="multipart/form-data">
+      method="post" >
+    <input type="hidden" name="cust_id" value="<S:property value="#customer.cust_id"/>"/>
+    <%--<input type="hidden" name="cust_level.dict_id" value="$('#customerGrade').val()" />--%>
+    <%--<input type="hidden" name="cust_source.dict_id" value="$('#customerSource').val() "/>--%>
     <TABLE cellSpacing=0 cellPadding=0 width="98%" border=0>
         <TBODY>
         <TR>
@@ -64,7 +69,7 @@
             <TD vAlign=top width="100%" bgColor=#ffffff>
                 <TABLE cellSpacing=0 cellPadding=5 width="100%" border=0>
                     <TR>
-                        <TD class=manageHead>当前位置：客户管理 &gt; 添加客户</TD>
+                        <TD class=manageHead>当前位置：客户管理 &gt; <s:if test="#customer.cust_id!=null">修改客户</s:if><s:else>添加客户</s:else></TD>
                     </TR>
                     <TR>
                         <TD height=2></TD>
@@ -76,7 +81,7 @@
 
                         <td>客户名称：</td>
                         <td>
-                            <INPUT class=textbox id=sChannel2
+                            <INPUT class=textbox id=sChannel2 value="<S:property value="#customer.cust_name" />"
                                    style="WIDTH: 180px" maxLength=50 name="cust_name">
                         </td>
                         <td>客户级别 ：</td>
@@ -93,8 +98,10 @@
                         </td>
                         <td>联系人：</td>
                         <td>
-                            <INPUT class=textbox id=sChannel2
-                                   style="WIDTH: 180px" maxLength=50 name="cust_linkman">
+                            <INPUT class=textbox id=sChannel2 type="text"
+                                   style="WIDTH: 180px" maxLength=50 name="cust_linkman" value="<S:property
+                                   value="#customer.cust_linkman" />"
+                                    />
                         </td>
                     </TR>
 
@@ -103,20 +110,15 @@
 
                         <td>固定电话 ：</td>
                         <td>
-                            <INPUT class=textbox id=sChannel2
+                            <INPUT class=textbox id=sChannel2 value="<S:property value="#customer.cust_phone" />"
                                    style="WIDTH: 180px" maxLength=50 name="cust_phone">
                         </td>
                         <td>移动电话 ：</td>
                         <td>
-                            <INPUT class=textbox id=sChannel2
+                            <INPUT class=textbox id=sChannel2 value="<S:property value="#customer.cust_mobile" />"
                                    style="WIDTH: 180px" maxLength=50 name="cust_mobile">
                         </td>
                     </TR>
-                    <tr>
-                        <td>
-                            <input type="file"name="photo" >
-                        </td>
-                    </tr>
                     <tr>
                         <td rowspan=2>
                             <INPUT class=button id=sButton2 type=submit

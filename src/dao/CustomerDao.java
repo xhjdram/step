@@ -27,8 +27,12 @@ public class CustomerDao extends HibernateDaoSupport {
         return byCriteria;
     }
 
-    public void add(Customer customer) {
+    public void addOrUpdate(Customer customer) {
         HibernateTemplate hibernateTemplate = this.getHibernateTemplate();
-        hibernateTemplate.save(customer);
+        hibernateTemplate.saveOrUpdate(customer);
+    }
+
+    public Customer getCustomerDao(Long cust_id) {
+       return this.getHibernateTemplate().get(Customer.class,cust_id);
     }
 }

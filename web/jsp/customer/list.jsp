@@ -20,6 +20,7 @@
             $("#customerForm").submit();
 //        alert(currentPage);
         }
+
         function changeCount(count) {
             alert(count);
             $("#count").val(count);
@@ -102,13 +103,14 @@
                                     <TR
                                             style="FONT-WEIGHT: normal; FONT-STYLE: normal; BACKGROUND-COLOR: white; TEXT-DECORATION: none">
                                         <TD><s:property value="#customer.cust_name"/></TD>
-                                        <TD><S:property value="#customer.cust_level.dict_item_name"/></TD>
-                                        <TD><S:property value="#customer.cust_source.dict_item_name"/></TD>
-                                        <TD><S:property value="#customer.cust_linkman"/></TD>
-                                        <TD><S:property value="#customer.cust_phone"/></TD>
-                                        <TD><S:property value="#customer.cust_mobile"/></TD>
+                                        <TD><s:property value="#customer.cust_level.dict_item_name"></s:property></TD>
+                                        <TD><s:property value="#customer.cust_source.dict_item_name"/></TD>
+                                        <TD><s:property value="#customer.cust_linkman"/></TD>
+                                        <TD><s:property value="#customer.cust_phone"/></TD>
+                                        <TD><s:property value="#customer.cust_mobile"/></TD>
                                         <TD>
-                                            <a href="${pageContext.request.contextPath }/customerServlet?method=edit&custId=${customer.cust_id}">修改</a>
+                                            <a
+                                                    href="${pageContext.request.contextPath }/customerAction_edit?cust_id=<s:property value="#customer.cust_id"/>">修改</a>
                                             &nbsp;&nbsp;
                                             <a href="${pageContext.request.contextPath }/customerServlet?method=delete&custId=${customer.cust_id}">删除</a>
                                         </TD>
