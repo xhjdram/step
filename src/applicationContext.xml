@@ -66,5 +66,23 @@
     <bean class="webs.action.Base_dictAction" name="base_dictAction" scope="prototype">
         <property name="base_dictService" ref="base_dictService"></property>
     </bean>
+    <bean class="webs.action.LinkManAction" name="linkManAction" scope="prototype">
+        <property name="linkManService" ref="linkManService"></property>
+    </bean>
+    <bean class="service.LinkManService" name="linkManService">
+        <property name="linkManDao" ref="linkManDao"></property>
+    </bean>
+    <bean class="dao.LinkManDao" name="linkManDao">
+        <property name="sessionFactory" ref="sessionFactory"></property>
+    </bean>
+    <bean class="dao.UserDao" name="userDao">
+        <property name="sessionFactory" ref="sessionFactory"></property>
+    </bean>
+    <bean class="service.UserService" name="userService" >
+        <property name="userDao" ref="userDao"></property>
+    </bean>
+    <bean class="webs.action.UserAction" name="userAction" scope="prototype">
+        <property name="userService" ref="userService"></property>
+    </bean>
 
 </beans>

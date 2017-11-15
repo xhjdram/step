@@ -27,6 +27,25 @@
             alert($("#count").val());
             $("#customerForm").submit();
         }
+
+        function send(cust_id ,cust_name) {
+            alert(cust_id);
+            alert(cust_name);
+            var opener = window.opener;
+
+            var document = opener.document;
+
+            var element = document.getElementById("cust_id");
+            alert(element);
+            element.value=cust_id;
+            var elementById = document.getElementById("cust_name");
+            elementById.value=cust_name;
+            window.close();
+
+
+
+
+        }
     </script>
 
     <META content="MSHTML 6.00.2900.3492" name=GENERATOR>
@@ -37,7 +56,7 @@
       method=post>
     <input name="currentPage" type="hidden" value="<S:property value='#pageBean.currentPage'/>" id="currentPage"/>
     <input name="count" type="hidden" value="<s:property value='#pagebean.currentPage'/>" id="count"/>
-
+    <input name="we" type="hidden" value="<s:property value='#parameters.we'/>"/>
     <TABLE cellSpacing=0 cellPadding=0 width="98%" border=0>
         <TBODY>
         <TR>
@@ -109,10 +128,17 @@
                                         <TD><s:property value="#customer.cust_phone"/></TD>
                                         <TD><s:property value="#customer.cust_mobile"/></TD>
                                         <TD>
-                                            <a
-                                                    href="${pageContext.request.contextPath }/customerAction_edit?cust_id=<s:property value="#customer.cust_id"/>">修改</a>
-                                            &nbsp;&nbsp;
-                                            <a href="${pageContext.request.contextPath }/customerServlet?method=delete&custId=${customer.cust_id}">删除</a>
+                                            <s:if test="#parameters.we!=null">
+                                                <input type="button" value="选择" onclick="send('<s:property
+                                                        value="#customer.cust_id"></s:property>','<s:property
+                                                        value="#customer.cust_name"/>')">
+                                            </s:if>
+                                            <s:else>
+                                                <a href="${pageContext.request.contextPath }/customerAction_edit?cust_id=<s:property value="#customer.cust_id"/>">修改</a>
+                                                &nbsp;&nbsp;
+                                                <a href="${pageContext.request.contextPath }/customerServlet?method=delete&custId=${customer.cust_id}">删除</a>
+                                            </s:else>
+
                                         </TD>
                                     </TR>
                                 </s:iterator>
@@ -172,6 +198,7 @@
         </TR>
         </TBODY>
     </TABLE>
+    <s:debug></s:debug>
 </FORM>
 </BODY>
 </HTML>

@@ -47,6 +47,10 @@
         <many-to-one name="cust_industry" column="cust_industry" class="domain.Base_dict" ></many-to-one>
         <many-to-one name="cust_level" column="cust_level" class="domain.Base_dict" ></many-to-one>
         <many-to-one name="cust_source" column="cust_source" class="domain.Base_dict" ></many-to-one>
+        <set name="sale_set" >
+            <key column="visit_cust_id"></key>
+            <one-to-many class="domain.Sale_visit"></one-to-many>
+        </set>
 
     </class>
 </hibernate-mapping>

@@ -21,7 +21,7 @@
 
     <META content="MSHTML 6.00.6000.16809" name=GENERATOR></HEAD>
 <BODY>
-<FORM id=form1 name=form1 action="${pageContext.request.contextPath}/LoginAction" method=post>
+<FORM id=form1 name=form1 action="${pageContext.request.contextPath}/userAction_login" method=post>
 
     <DIV id=UpdatePanel1>
         <DIV id=div1
@@ -50,15 +50,16 @@
                                         <TBODY>
                                         <TR>
                                             <TD style="HEIGHT: 28px" width=80>登 录 名：</TD>
-                                            <TD style="HEIGHT: 28px" width=150><INPUT id=txtName
-                                                                                      style="WIDTH: 130px" name=name></TD>
+                                            <TD style="HEIGHT: 28px" width=150><INPUT id="txtName"
+                                                                                      style="WIDTH: 130px"
+                                                                                      name="user_code"></TD>
                                             <TD style="HEIGHT: 28px" width=370><SPAN
                                                     id=RequiredFieldValidator3
                                                     style="FONT-WEIGHT: bold; VISIBILITY: hidden; COLOR: white">请输入登录名</SPAN></TD></TR>
                                         <TR>
                                             <TD style="HEIGHT: 28px">登录密码：</TD>
                                             <TD style="HEIGHT: 28px"><INPUT id=txtPwd style="WIDTH: 130px"
-                                                                            type=password name=password></TD>
+                                                                            type=password name="user_password"></TD>
                                             <TD style="HEIGHT: 28px"><SPAN id=RequiredFieldValidator4
                                                                            style="FONT-WEIGHT: bold; VISIBILITY: hidden; COLOR: white">请输入密码</SPAN></TD></TR>
                                         <TR>

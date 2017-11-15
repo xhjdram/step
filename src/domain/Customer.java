@@ -33,6 +33,8 @@ public class Customer {
     private Base_dict cust_source;
     private Base_dict cust_industry;
     private Base_dict cust_level;
+    private Set<Sale_visit> sale_set = new HashSet<Sale_visit>();
+
     public Set<LinkMan> getSet() {
         return set;
     }
@@ -106,6 +108,13 @@ public class Customer {
     }
 
 
+    public Set<Sale_visit> getSale_set() {
+        return sale_set;
+    }
+
+    public void setSale_set(Set<Sale_visit> sale_set) {
+        this.sale_set = sale_set;
+    }
 
     @Override
     public String toString() {
