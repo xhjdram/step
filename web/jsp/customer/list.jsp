@@ -32,19 +32,13 @@
             alert(cust_id);
             alert(cust_name);
             var opener = window.opener;
-
             var document = opener.document;
-
             var element = document.getElementById("cust_id");
             alert(element);
             element.value=cust_id;
             var elementById = document.getElementById("cust_name");
             elementById.value=cust_name;
             window.close();
-
-
-
-
         }
     </script>
 

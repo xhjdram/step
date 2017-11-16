@@ -18,6 +18,15 @@
             FONT-SIZE: 12px; COLOR: #ffffff; FONT-FAMILY: 宋体
         }
     </STYLE>
+    <script type="text/javascript">
+        window.onload=function(){
+
+            if(window.parent != window){// 如果是在框架中
+                //就让框架页面跳转到登陆页面
+                window.parent.location.href = "${pageContext.request.contextPath}/login.jsp";
+            }
+        }
+    </script>
 
     <META content="MSHTML 6.00.6000.16809" name=GENERATOR></HEAD>
 <BODY>

@@ -5,7 +5,19 @@
 <struts>
     <constant name="struts.objectFactory" value="spring"></constant>
     <package name="user" namespace="/" extends="struts-default">
-
+        <interceptors>
+            <interceptor name="myInterceptor" class="webs.interceptor.MyInterceptor"></interceptor>
+            <interceptor-stack name="myStack">
+                <interceptor-ref name="myInterceptor">
+                    <param name="excludeMethods">login,regist</param>
+                </interceptor-ref>
+                <interceptor-ref name="defaultStack"></interceptor-ref>
+            </interceptor-stack>
+        </interceptors>
+        <default-interceptor-ref name="myStack"></default-interceptor-ref>
+        <global-results>
+            <result name="toLogin" type="redirect">/login.jsp</result>
+        </global-results>
         <action class="customerAction" name="customerAction_*" method="{1}">
             <result name="list" type="dispatcher">/jsp/customer/list.jsp</result>
             <result type="dispatcher" name="add">/jsp/customer/add.jsp</result>
@@ -20,6 +32,9 @@
         </action>
         <action name="userAction_*" class="userAction" method="{1}">
             <result name="toList" type="redirect">/jsp/success.jsp</result>
+        </action>
+        <action class="sale_visitAction" name="Salevisit_*" method="{1}">
+            <result name="toList" type="redirect">/jsp/salevisit/list.jsp</result>
         </action>
     </package>
 </struts>

@@ -85,14 +85,14 @@
         function MenuDisplay(obj_id) {
             for (var i = 1; i <= 9; i++) {
                 var obj = document.getElementById('table_' + i);
-                if(obj){
+                if (obj) {
                     document.getElementById('table_' + i).style.display = 'none';
                     document.getElementById('table_' + i + 'Span').innerText = '＋';
                 }
 
             }
             var obj = document.getElementById(obj_id);
-            if(obj){
+            if (obj) {
                 if (obj.style.display == 'none') {
                     obj.style.display = 'block';
                     document.getElementById(obj_id + 'Span').innerText = '－';
@@ -128,7 +128,8 @@
                     <TBODY>
                     <TR>
                         <TD class=mainMenu onClick="MenuDisplay('table_1');"><SPAN
-                                class=span id=table_1Span>＋</SPAN> 客户管理</TD>
+                                class=span id=table_1Span>＋</SPAN> 客户管理
+                        </TD>
                     </TR>
                     <TR>
                         <TD>
@@ -155,7 +156,8 @@
                     </TR>
                     <TR>
                         <TD class=mainMenu onClick="MenuDisplay('table_2');"><SPAN
-                                class=span id=table_2Span>＋</SPAN> 联系人管理</TD>
+                                class=span id=table_2Span>＋</SPAN> 联系人管理
+                        </TD>
                     </TR>
                     <TR>
                         <TD>
@@ -182,7 +184,8 @@
                     </TR>
                     <TR>
                         <TD class=mainMenu onClick="MenuDisplay('table_5');"><SPAN
-                                class=span id=table_5Span>＋</SPAN> 客户拜访管理</TD>
+                                class=span id=table_5Span>＋</SPAN> 客户拜访管理
+                        </TD>
                     </TR>
                     <TR>
                         <TD>
@@ -190,7 +193,8 @@
                                    cellPadding=2 width=155 align=center border=0>
                                 <TBODY>
                                 <TR>
-                                    <TD class=menuSmall><A class=style2 href="#"
+                                    <TD class=menuSmall><A class=style2
+                                                           href="${pageContext.request.contextPath}/jsp/salevisit/add.jsp"
                                                            target=main>－新增客户拜访</A></TD>
                                 </TR>
                                 <TR>
@@ -207,7 +211,8 @@
                     </TR>
                     <TR>
                         <TD class=mainMenu onClick="MenuDisplay('table_3');"><SPAN
-                                class=span id=table_3Span>＋</SPAN> 综合查询</TD>
+                                class=span id=table_3Span>＋</SPAN> 综合查询
+                        </TD>
                     </TR>
                     <TR>
                         <TD>
@@ -235,7 +240,8 @@
                     </TR>
                     <TR>
                         <TD class=mainMenu onClick="MenuDisplay('table_4');"><SPAN
-                                class=span id=table_4Span>＋</SPAN> 统计分析</TD>
+                                class=span id=table_4Span>＋</SPAN> 统计分析
+                        </TD>
                     </TR>
                     <TR>
                         <TD>
@@ -260,7 +266,8 @@
                     </TR>
                     <TR>
                         <TD class=mainMenu onClick="MenuDisplay('table_6');"><SPAN
-                                class=span id=table_6Span>＋</SPAN>系统管理</TD>
+                                class=span id=table_6Span>＋</SPAN>系统管理
+                        </TD>
                     </TR>
                     <TR>
                         <TD>

@@ -3,22 +3,40 @@ package domain;
 import java.util.Date;
 
 public class Sale_visit {
-//      `visit_id` varchar(32) NOT NULL,
-//  `visit_cust_id` bigint(32) DEFAULT NULL COMMENT '客户id',
-//            `visit_user_id` bigint(32) DEFAULT NULL COMMENT '负责人id',
-//            `visit_time` date DEFAULT NULL COMMENT '拜访时间',
-//            `visit_interviewee` varchar(32) DEFAULT NULL COMMENT '被拜访人',
-//            `visit_addr` varchar(128) DEFAULT NULL COMMENT '拜访地点',
-//            `visit_detail` varchar(256) DEFAULT NULL COMMENT '拜访详情',
-//            `visit_nexttime` date DEFAULT NULL COMMENT '下次拜访时间',
+    //      `visit_id` varchar(32) NOT NULL,
     private String visit_id;
-    private String visit_cust_id;
-    private String visit_user_id;
+    //            `visit_nexttime` date DEFAULT NULL COMMENT '下次拜访时间',
+
+    //            `visit_detail` varchar(256) DEFAULT NULL COMMENT '拜访详情',
     private String visit_interviewee;
+    //            `visit_addr` varchar(128) DEFAULT NULL COMMENT '拜访地点',
     private String visit_addr;
+    //            `visit_interviewee` varchar(32) DEFAULT NULL COMMENT '被拜访人',
     private String visit_detail;
+    //            `visit_time` date DEFAULT NULL COMMENT '拜访时间',
     private Date visit_time;
+    //            `visit_user_id` bigint(32) DEFAULT NULL COMMENT '负责人id',
     private Date visit_nexttime;
+    //  `visit_cust_id` bigint(32) DEFAULT NULL COMMENT '客户id',
+    private User user;
+    private Customer customer;
+
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
+    }
 
     public String getVisit_id() {
         return visit_id;
@@ -28,21 +46,7 @@ public class Sale_visit {
         this.visit_id = visit_id;
     }
 
-    public String getVisit_cust_id() {
-        return visit_cust_id;
-    }
 
-    public void setVisit_cust_id(String visit_cust_id) {
-        this.visit_cust_id = visit_cust_id;
-    }
-
-    public String getVisit_user_id() {
-        return visit_user_id;
-    }
-
-    public void setVisit_user_id(String visit_user_id) {
-        this.visit_user_id = visit_user_id;
-    }
 
     public String getVisit_interviewee() {
         return visit_interviewee;

@@ -84,5 +84,14 @@
     <bean class="webs.action.UserAction" name="userAction" scope="prototype">
         <property name="userService" ref="userService"></property>
     </bean>
+    <bean class="dao.Sale_visitDao" name="sale_visitDao" >
+        <property name="sessionFactory" ref="sessionFactory"></property>
+    </bean>
+    <bean class="service.Sale_visitService" name="sale_visitService">
+        <property name="sale_visitDao" ref="sale_visitDao"></property>
+    </bean>
+    <bean class="webs.action.Sale_visitAction" name="sale_visitAction" scope="prototype">
+        <property name="sale_visitService" ref="sale_visitService"></property>
+    </bean>
 
 </beans>

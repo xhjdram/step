@@ -12,7 +12,7 @@
         <property name="visit_interviewee"></property>
         <property name="visit_time"></property>
         <property name="visit_nexttime"></property>
-        <many-to-one name="visit_cust_id" column="visit_cust_id" class="domain.Customer"></many-to-one>
-        <many-to-one name="visit_user_id" column="visit_user_id" class="domain.User"></many-to-one>
+        <many-to-one name="customer" column="visit_cust_id" class="domain.Customer"></many-to-one>
+        <many-to-one name="user" column="visit_user_id" class="domain.User"></many-to-one>
     </class>
 </hibernate-mapping>
