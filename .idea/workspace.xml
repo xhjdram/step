@@ -10,51 +10,7 @@
     <bookmark url="file://$PROJECT_DIR$/../step/src/struts.xml" line="35" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c805e5d-d452-4361-afdf-c882a04d1d24" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step/web/WEB-INF/Classes/dao/CustomerDao.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step/web/WEB-INF/Classes/domain/Customer.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step/web/WEB-INF/Classes/domain/Customer.hbm.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step/web/WEB-INF/Classes/domain/LinkMan.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step/web/WEB-INF/Classes/domain/LinkMan.hbm.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step/web/WEB-INF/Classes/domain/PageBean.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step/web/WEB-INF/Classes/domain/User.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step/web/WEB-INF/Classes/domain/User.hbm.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step/web/WEB-INF/Classes/service/CustomerService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step/web/WEB-INF/Classes/webs/action/CustomerAction.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../step/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../step/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../step/src/applicationContext.xml" afterPath="$PROJECT_DIR$/../step/src/applicationContext.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../step/src/hibernate.cfg.xml.x" afterPath="$PROJECT_DIR$/../step/src/hibernate.cfg.xml.x" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../step/src/struts.xml" afterPath="$PROJECT_DIR$/../step/src/struts.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../step/src/dao/BaseDAo.java" afterPath="$PROJECT_DIR$/../step/src/my/dao/BaseDAo.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../step/src/dao/BaseImpl.java" afterPath="$PROJECT_DIR$/../step/src/my/dao/BaseImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../step/src/dao/Base_dictDao.java" afterPath="$PROJECT_DIR$/../step/src/my/dao/Base_dictDao.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../step/src/dao/CustomerDao.java" afterPath="$PROJECT_DIR$/../step/src/my/dao/CustomerDao.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../step/src/dao/LinkManDao.java" afterPath="$PROJECT_DIR$/../step/src/my/dao/LinkManDao.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../step/src/dao/Sale_visitDao.java" afterPath="$PROJECT_DIR$/../step/src/my/dao/Sale_visitDao.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../step/src/dao/UserDao.java" afterPath="$PROJECT_DIR$/../step/src/my/dao/UserDao.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../step/src/domain/Base_dict.hbm.xml" afterPath="$PROJECT_DIR$/../step/src/my/domain/Base_dict.hbm.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../step/src/domain/Base_dict.java" afterPath="$PROJECT_DIR$/../step/src/my/domain/Base_dict.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../step/src/domain/Customer.hbm.xml" afterPath="$PROJECT_DIR$/../step/src/my/domain/Customer.hbm.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../step/src/domain/Customer.java" afterPath="$PROJECT_DIR$/../step/src/my/domain/Customer.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../step/src/domain/LinkMan.hbm.xml" afterPath="$PROJECT_DIR$/../step/src/my/domain/LinkMan.hbm.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../step/src/domain/LinkMan.java" afterPath="$PROJECT_DIR$/../step/src/my/domain/LinkMan.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../step/src/domain/PageBean.java" afterPath="$PROJECT_DIR$/../step/src/my/domain/PageBean.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../step/src/domain/Sale_visit.hbm.xml" afterPath="$PROJECT_DIR$/../step/src/my/domain/Sale_visit.hbm.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../step/src/domain/Sale_visit.java" afterPath="$PROJECT_DIR$/../step/src/my/domain/Sale_visit.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../step/src/domain/User.hbm.xml" afterPath="$PROJECT_DIR$/../step/src/my/domain/User.hbm.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../step/src/domain/User.java" afterPath="$PROJECT_DIR$/../step/src/my/domain/User.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../step/src/service/Base_dictService.java" afterPath="$PROJECT_DIR$/../step/src/my/service/Base_dictService.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../step/src/service/CustomerService.java" afterPath="$PROJECT_DIR$/../step/src/my/service/CustomerService.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../step/src/service/LinkManService.java" afterPath="$PROJECT_DIR$/../step/src/my/service/LinkManService.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../step/src/service/Sale_visitService.java" afterPath="$PROJECT_DIR$/../step/src/my/service/Sale_visitService.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../step/src/service/UserService.java" afterPath="$PROJECT_DIR$/../step/src/my/service/UserService.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../step/src/webs/action/Base_dictAction.java" afterPath="$PROJECT_DIR$/../step/src/my/webs/action/Base_dictAction.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../step/src/webs/action/CustomerAction.java" afterPath="$PROJECT_DIR$/../step/src/my/webs/action/CustomerAction.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../step/src/webs/action/LinkManAction.java" afterPath="$PROJECT_DIR$/../step/src/my/webs/action/LinkManAction.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../step/src/webs/action/Sale_visitAction.java" afterPath="$PROJECT_DIR$/../step/src/my/webs/action/Sale_visitAction.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../step/src/webs/action/UserAction.java" afterPath="$PROJECT_DIR$/../step/src/my/webs/action/UserAction.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../step/src/webs/interceptor/MyInterceptor.java" afterPath="$PROJECT_DIR$/../step/src/my/webs/interceptor/MyInterceptor.java" />
-    </list>
+    <list default="true" id="0c805e5d-d452-4361-afdf-c882a04d1d24" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/../step/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -651,7 +607,7 @@
       <workItem from="1510726025371" duration="9666000" />
       <workItem from="1510817927033" duration="9966000" />
       <workItem from="1510829607326" duration="3627000" />
-      <workItem from="1511072987616" duration="4826000" />
+      <workItem from="1511072987616" duration="4847000" />
     </task>
     <task id="LOCAL-00001" summary="BaseDao&#10;BaseImpl">
       <created>1510220162248</created>
@@ -716,11 +672,18 @@
       <option name="project" value="LOCAL" />
       <updated>1510833604533</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="？？？？">
+      <created>1511086430393</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1511086430393</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="139694000" />
+    <option name="totallyTimeSpent" value="139715000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
