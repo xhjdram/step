@@ -6,7 +6,7 @@
     <constant name="struts.objectFactory" value="spring"></constant>
     <package name="user" namespace="/" extends="struts-default">
         <interceptors>
-            <interceptor name="myInterceptor" class="webs.interceptor.MyInterceptor"></interceptor>
+            <interceptor name="myInterceptor" class="my.webs.interceptor.MyInterceptor"></interceptor>
             <interceptor-stack name="myStack">
                 <interceptor-ref name="myInterceptor">
                     <param name="excludeMethods">login,regist</param>
